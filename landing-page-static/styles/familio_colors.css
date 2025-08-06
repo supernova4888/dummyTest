@@ -1,0 +1,13 @@
+:root {
+  --familio-primary: #759677;
+  --familio-primary-light: #b9cfba;
+  --familio-primary-dark: #5d7b61;
+  --familio-secondary: #b9563b;
+  --familio-secondary-light: #d3765d;
+  --familio-secondary-dark: #933b26;
+  --familio-bg: #faf4ec;
+  --familio-surface: #f3ece3;
+  --familio-text-dark: #3c403c;
+  --familio-text-light: #6c706c;
+  --familio-contrast-accent: #e5cfc9;
+}

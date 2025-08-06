@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swedish Parental Planning Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="/" class="logo-link">
+            <img
+              src="familio-logo.png"
+              alt="Familio Logo"
+              class="header-logo"
+              style="display: none"
+              onload="this.style.display='block'"
+              onerror="this.style.display='none'"
+            />
+            <h1 class="familio-brand">Familio</h1>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="landing-page">
+      <div class="landing-container">
+        <!-- Left Column - Main Content -->
+        <div class="landing-content">
+          <div class="content-center">
+            <h1 class="landing-headline">
+              Hej! Your journey as a parent starts now
+            </h1>
+            <p class="landing-subheading">
+              Let us take care of simplifying your Swedish parental planning by
+              using our calculation tool. To learn more visit the
+              <a href="/about" class="inline-link">About</a> section.
+            </p>
+
+            <div class="cta-section">
+              <!-- Netlify Form -->
+              <form
+                name="get-started"
+                method="POST"
+                data-netlify="true"
+                action="/thank-you"
+              >
+                <input type="hidden" name="form-name" value="get-started" />
+
+                <div class="form-group">
+                  <label for="email">Enter your email to get started:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    class="email-input"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Your name (optional):</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    class="name-input"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary cta-button">
+                  Get Started
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Benefits Section -->
+          <div class="benefits-section">
+            <ul class="benefits-list">
+              <li class="benefit-item">
+                <span class="checkmark">✓</span>
+                Save time and energy by letting us keep track of the rules
+              </li>
+              <li class="benefit-item">
+                <span class="checkmark">✓</span>
+                Gain financial confidence by quickly understanding your family's
+                income
+              </li>
+              <li class="benefit-item">
+                <span class="checkmark">✓</span>
+                Build trust and connection by making decisions together with
+                practical support
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column - Hero Image -->
+        <div class="landing-image">
+          <img
+            src="hero_family_web.png"
+            alt="Happy family - Swedish parental planning support"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional: Add some interactivity with vanilla JavaScript -->
+    <script>
+      // Simple form enhancement
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector('form[name="get-started"]');
+        const emailInput = document.getElementById("email");
+
+        form.addEventListener("submit", function (e) {
+          // Add a loading state to the button
+          const submitButton = form.querySelector('button[type="submit"]');
+          submitButton.textContent = "Getting Started...";
+          submitButton.disabled = true;
+        });
+
+        // Add some visual feedback for email input
+        emailInput.addEventListener("input", function () {
+          if (this.validity.valid) {
+            this.classList.add("valid");
+            this.classList.remove("invalid");
+          } else {
+            this.classList.add("invalid");
+            this.classList.remove("valid");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
