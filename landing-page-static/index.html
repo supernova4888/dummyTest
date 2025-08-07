@@ -28,28 +28,47 @@
     </header>
 
     <div class="landing-page">
-      <div class="landing-container">
+      <div class="landing-container" style="padding-top: 1rem">
         <!-- Left Column - Main Content -->
         <div class="landing-content">
           <div class="content-center">
-            <h1 class="landing-headline">
-              Hej! Your journey as a parent starts now
+            <!-- Main Headline -->
+            <h1
+              style="
+                font-size: 2.8rem;
+                font-weight: 700;
+                color: var(--familio-primary-dark);
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+                max-width: 600px;
+              "
+            >
+              The Swedish Parental Planning Tool Parents Have Been Waiting For
             </h1>
-            <p class="landing-subheading">
-              Let us take care of simplifying your Swedish parental planning by
-              using our calculation tool. To learn more visit the
-              <a href="/about" class="inline-link">About</a> section.
+
+            <p
+              style="
+                font-size: 1.2rem;
+                color: var(--familio-text-light);
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                max-width: 500px;
+              "
+            >
+              We're building a simple, trusted way to navigate Swedish parental
+              benefits. Join our early community and help us create something
+              truly helpful for Swedish families.
             </p>
 
             <div class="cta-section">
               <!-- Netlify Form -->
-
               <form
                 name="get-started"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 action="/success.html"
+                style="max-width: 400px; margin: 0 auto; text-align: center"
               >
                 <!-- Netlify needs to know this form's name on the backend -->
                 <input type="hidden" name="form-name" value="get-started" />
@@ -63,8 +82,18 @@
                 </p>
 
                 <!-- your real fields -->
-                <div class="form-group">
-                  <label for="email">Enter your email to get started:</label>
+                <div class="form-group" style="margin-bottom: 0.5rem">
+                  <label
+                    for="email"
+                    style="
+                      display: block;
+                      margin-bottom: 0.8rem;
+                      font-size: 1rem;
+                      font-weight: 600;
+                      color: var(--familio-text-dark);
+                    "
+                    >Join the early access list:</label
+                  >
                   <input
                     type="email"
                     id="email"
@@ -72,42 +101,102 @@
                     placeholder="your@email.com"
                     required
                     class="email-input"
+                    style="
+                      width: 100%;
+                      max-width: 350px;
+                      padding: 12px 16px;
+                      font-size: 1rem;
+                      border-radius: 8px;
+                    "
                   />
                 </div>
 
-                <div class="form-group">
-                  <label for="name">Your name (optional):</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    class="name-input"
-                  />
+                <!-- GDPR Compliance Notice -->
+                <div style="margin: 0.6rem 0 1rem 0; text-align: center">
+                  <small
+                    style="
+                      color: var(--familio-text-light);
+                      font-size: 0.8rem;
+                      max-width: 350px;
+                      display: inline-block;
+                      line-height: 1.4;
+                    "
+                  >
+                    By submitting your email, you agree to receive updates about
+                    the beta launch. You can unsubscribe at any time. Read our
+                    <a
+                      href="#privacy-policy"
+                      style="
+                        color: var(--familio-primary);
+                        text-decoration: underline;
+                      "
+                      >Privacy Policy</a
+                    >.
+                  </small>
                 </div>
 
-                <button type="submit" class="btn btn-primary cta-button">
-                  Get Started
+                <!-- Risk Reversal -->
+                <div
+                  class="guarantee"
+                  style="margin: 0.5rem 0 1.5rem 0; text-align: center"
+                >
+                  <small
+                    style="
+                      color: var(--familio-text-light);
+                      font-size: 0.85rem;
+                      max-width: 350px;
+                      display: inline-block;
+                      line-height: 1.3;
+                    "
+                  >
+                    ✅ Early access updates only • ✅ No spam • ✅ Unsubscribe
+                    anytime
+                  </small>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary cta-button"
+                  style="
+                    width: 100%;
+                    max-width: 350px;
+                    padding: 14px 24px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    border-radius: 8px;
+                  "
+                >
+                  Reserve My Spot
                 </button>
               </form>
             </div>
 
             <!-- Benefits Section -->
-            <div class="benefits-section">
+            <div class="benefits-section" style="margin-top: 2.5rem">
               <ul class="benefits-list">
-                <li class="benefit-item">
-                  <span class="checkmark">✓</span>
-                  Save time and energy by letting us keep track of the rules
+                <li
+                  class="benefit-item"
+                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
+                >
+                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
+                  Save time and energy by letting us keep track of the 50+
+                  Försäkringskassa rules
                 </li>
-                <li class="benefit-item">
-                  <span class="checkmark">✓</span>
-                  Gain financial confidence by quickly understanding your
-                  family's income
+                <li
+                  class="benefit-item"
+                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
+                >
+                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
+                  Make financially informed decisions that work for your
+                  family's unique situation
                 </li>
-                <li class="benefit-item">
-                  <span class="checkmark">✓</span>
-                  Build trust and connection by making decisions together with
-                  practical support
+                <li
+                  class="benefit-item"
+                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
+                >
+                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
+                  Join a community of parents planning their Swedish journey
+                  together
                 </li>
               </ul>
             </div>
@@ -125,6 +214,51 @@
       </div>
     </div>
 
+    <!-- Privacy Policy Footer -->
+    <footer
+      id="privacy-policy"
+      style="
+        background-color: var(--familio-surface);
+        padding: 2.5rem 20px 2rem;
+        margin-top: 2rem;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto">
+        <h3
+          style="
+            color: var(--familio-primary-dark);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+          "
+        >
+          📜 Privacy Policy
+        </h3>
+        <div
+          style="
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--familio-text-dark);
+            line-height: 1.6;
+          "
+        >
+          <p style="margin-bottom: 1rem; font-size: 0.95rem">
+            We collect your email address to notify you about the beta release
+            and product updates. Your data is stored securely using Netlify
+            Forms and is not shared with third parties.
+          </p>
+          <p style="margin-bottom: 0; font-size: 0.95rem">
+            You can unsubscribe or request deletion anytime by contacting us at
+            <a
+              href="mailto:hello@familioplan.com"
+              style="color: var(--familio-primary)"
+              >hello@familioplan.com</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <!-- Enhanced form loading feedback -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -134,7 +268,7 @@
         if (form) {
           form.addEventListener("submit", function (e) {
             const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.textContent = "Processing...";
+            submitButton.textContent = "Reserving...";
             submitButton.disabled = true;
 
             // Add visual loading state
@@ -154,6 +288,17 @@
             });
           }
         }
+
+        // Smooth scroll for privacy policy link
+        document
+          .querySelector('a[href="#privacy-policy"]')
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#privacy-policy").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
       });
     </script>
   </body>
