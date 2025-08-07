@@ -37,73 +37,123 @@
         <!-- Left Column - Main Content -->
         <div class="landing-content">
           <div class="content-center">
-            <h1 class="landing-headline">
-              Hej! Your journey as a parent starts now
-            </h1>
-            <p class="landing-subheading">
-              Let us take care of simplifying your Swedish parental planning by
-              using our calculation tool. To learn more visit the
-              <a href="/about" class="inline-link">About</a> section.
-            </p>
+            <!-- Success Message (hidden by default) -->
+            <div id="success-message" style="display: none">
+              <h1 class="landing-headline">Tack så mycket! 🎉</h1>
+              <p class="landing-subheading">
+                Thank you for your interest in our Swedish parental planning
+                tool! We've received your information and will be in touch soon
+                with next steps.
+              </p>
 
-            <div class="cta-section">
-              <!-- Netlify Form -->
-              <form
-                name="get-started"
-                method="POST"
-                data-netlify="true"
-                data-netlify-redirect="/thank-you/"
-              >
-                <input type="hidden" name="form-name" value="get-started" />
+              <div class="benefits-section" style="margin-top: 3rem">
+                <h3
+                  style="
+                    color: var(--familio-primary-dark);
+                    margin-bottom: 1.5rem;
+                    font-size: 1.4rem;
+                  "
+                >
+                  What happens next?
+                </h3>
+                <ul class="benefits-list">
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    You'll receive a welcome email with getting started
+                    information
+                  </li>
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    Access to our comprehensive parental planning calculator
+                  </li>
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    Tips and guidance for navigating Swedish parental benefits
+                  </li>
+                </ul>
+              </div>
 
-                <div class="form-group">
-                  <label for="email">Enter your email to get started:</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    required
-                    class="email-input"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="name">Your name (optional):</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    class="name-input"
-                  />
-                </div>
-
-                <button type="submit" class="btn btn-primary cta-button">
-                  Get Started
-                </button>
-              </form>
+              <div class="cta-section" style="margin-top: 3rem">
+                <a
+                  href="/"
+                  class="btn btn-primary cta-button"
+                  style="display: inline-block; text-decoration: none"
+                >
+                  Continue
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Benefits Section -->
-          <div class="benefits-section">
-            <ul class="benefits-list">
-              <li class="benefit-item">
-                <span class="checkmark">✓</span>
-                Save time and energy by letting us keep track of the rules
-              </li>
-              <li class="benefit-item">
-                <span class="checkmark">✓</span>
-                Gain financial confidence by quickly understanding your family's
-                income
-              </li>
-              <li class="benefit-item">
-                <span class="checkmark">✓</span>
-                Build trust and connection by making decisions together with
-                practical support
-              </li>
-            </ul>
+            <!-- Original Content (hidden when success) -->
+            <div id="original-content">
+              <h1 class="landing-headline">
+                Hej! Your journey as a parent starts now
+              </h1>
+              <p class="landing-subheading">
+                Let us take care of simplifying your Swedish parental planning
+                by using our calculation tool. To learn more visit the
+                <a href="/about" class="inline-link">About</a> section.
+              </p>
+
+              <div class="cta-section">
+                <!-- Netlify Form -->
+                <form
+                  name="get-started"
+                  method="POST"
+                  data-netlify="true"
+                  action="/?success=true"
+                >
+                  <input type="hidden" name="form-name" value="get-started" />
+
+                  <div class="form-group">
+                    <label for="email">Enter your email to get started:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="your@email.com"
+                      required
+                      class="email-input"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="name">Your name (optional):</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Your name"
+                      class="name-input"
+                    />
+                  </div>
+
+                  <button type="submit" class="btn btn-primary cta-button">
+                    Get Started
+                  </button>
+                </form>
+              </div>
+
+              <!-- Benefits Section -->
+              <div class="benefits-section">
+                <ul class="benefits-list">
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    Save time and energy by letting us keep track of the rules
+                  </li>
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    Gain financial confidence by quickly understanding your
+                    family's income
+                  </li>
+                  <li class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    Build trust and connection by making decisions together with
+                    practical support
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -118,30 +168,44 @@
       </div>
     </div>
 
-    <!-- Optional: Add some interactivity with vanilla JavaScript -->
+    <!-- JavaScript for success handling -->
     <script>
-      // Simple form enhancement
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector('form[name="get-started"]');
         const emailInput = document.getElementById("email");
+        const successMessage = document.getElementById("success-message");
+        const originalContent = document.getElementById("original-content");
 
-        form.addEventListener("submit", function (e) {
-          // Add a loading state to the button
-          const submitButton = form.querySelector('button[type="submit"]');
-          submitButton.textContent = "Getting Started...";
-          submitButton.disabled = true;
-        });
+        // Check if success parameter is in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("success") === "true") {
+          // Show success message, hide original content
+          originalContent.style.display = "none";
+          successMessage.style.display = "block";
 
-        // Add some visual feedback for email input
-        emailInput.addEventListener("input", function () {
-          if (this.validity.valid) {
-            this.classList.add("valid");
-            this.classList.remove("invalid");
-          } else {
-            this.classList.add("invalid");
-            this.classList.remove("valid");
-          }
-        });
+          // Scroll to top smoothly
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Add a loading state to the button
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.textContent = "Sending...";
+            submitButton.disabled = true;
+          });
+
+          // Add some visual feedback for email input
+          emailInput.addEventListener("input", function () {
+            if (this.validity.valid) {
+              this.classList.add("valid");
+              this.classList.remove("invalid");
+            } else {
+              this.classList.add("invalid");
+              this.classList.remove("valid");
+            }
+          });
+        }
       });
     </script>
   </body>
