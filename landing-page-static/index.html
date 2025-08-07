@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swedish Parental Planning Tool</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="/success.html" as="document" />
   </head>
   <body>
     <!-- Header -->
@@ -50,13 +51,13 @@
                 data-netlify-honeypot="bot-field"
                 action="/success.html"
               >
-                <!-- Netlify needs to know this form’s name on the backend -->
+                <!-- Netlify needs to know this form's name on the backend -->
                 <input type="hidden" name="form-name" value="get-started" />
 
-                <!-- honeypot: humans won’t fill this -->
+                <!-- honeypot: humans won't fill this -->
                 <p hidden>
                   <label
-                    >Don’t fill this out if you’re human:
+                    >Don't fill this out if you're human:
                     <input name="bot-field" />
                   </label>
                 </p>
@@ -124,7 +125,7 @@
       </div>
     </div>
 
-    <!-- Simple form enhancement -->
+    <!-- Enhanced form loading feedback -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector('form[name="get-started"]');
@@ -133,8 +134,12 @@
         if (form) {
           form.addEventListener("submit", function (e) {
             const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.textContent = "Sending...";
+            submitButton.textContent = "Processing...";
             submitButton.disabled = true;
+
+            // Add visual loading state
+            submitButton.style.opacity = "0.7";
+            submitButton.style.cursor = "wait";
           });
 
           if (emailInput) {
