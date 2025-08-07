@@ -170,22 +170,47 @@
 
     <!-- JavaScript for success handling -->
     <script>
+      // Run immediately, not waiting for DOMContentLoaded
+      (function () {
+        // Check if success parameter is in URL immediately
+        const urlParams = new URLSearchParams(window.location.search);
+        console.log("URL params:", urlParams.toString()); // Debug log
+        console.log("Success param:", urlParams.get("success")); // Debug log
+
+        if (urlParams.get("success") === "true") {
+          console.log("Success detected, showing success message"); // Debug log
+
+          // Function to show success message
+          function showSuccess() {
+            const successMessage = document.getElementById("success-message");
+            const originalContent = document.getElementById("original-content");
+
+            if (successMessage && originalContent) {
+              originalContent.style.display = "none";
+              successMessage.style.display = "block";
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              console.log("Success message shown"); // Debug log
+            } else {
+              console.log("Elements not found:", {
+                successMessage,
+                originalContent,
+              }); // Debug log
+            }
+          }
+
+          // Try to show immediately if DOM is ready, otherwise wait
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", showSuccess);
+          } else {
+            showSuccess();
+          }
+        }
+      })();
+
+      // Regular form handling
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector('form[name="get-started"]');
         const emailInput = document.getElementById("email");
-        const successMessage = document.getElementById("success-message");
-        const originalContent = document.getElementById("original-content");
-
-        // Check if success parameter is in URL
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get("success") === "true") {
-          // Show success message, hide original content
-          originalContent.style.display = "none";
-          successMessage.style.display = "block";
-
-          // Scroll to top smoothly
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
 
         if (form) {
           form.addEventListener("submit", function (e) {
@@ -196,15 +221,17 @@
           });
 
           // Add some visual feedback for email input
-          emailInput.addEventListener("input", function () {
-            if (this.validity.valid) {
-              this.classList.add("valid");
-              this.classList.remove("invalid");
-            } else {
-              this.classList.add("invalid");
-              this.classList.remove("valid");
-            }
-          });
+          if (emailInput) {
+            emailInput.addEventListener("input", function () {
+              if (this.validity.valid) {
+                this.classList.add("valid");
+                this.classList.remove("invalid");
+              } else {
+                this.classList.add("invalid");
+                this.classList.remove("valid");
+              }
+            });
+          }
         }
       });
     </script>
