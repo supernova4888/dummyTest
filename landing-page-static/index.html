@@ -21,43 +21,26 @@
               onload="this.style.display='block'"
               onerror="this.style.display='none'"
             />
-            <h1 class="familio-brand">Palepa</h1>
+            <h1 class="familio-brand">Familio</h1>
           </a>
         </div>
       </div>
     </header>
 
     <div class="landing-page">
-      <div class="landing-container" style="padding-top: 1rem">
+      <div class="landing-container" style="padding-top: 1.5rem">
         <!-- Left Column - Main Content -->
         <div class="landing-content">
-          <div class="content-center">
+          <div class="content-center" style="max-width: 520px;">
             <!-- Main Headline -->
-            <h1
-              style="
-                font-size: 2.8rem;
-                font-weight: 700;
-                color: var(--familio-primary-dark);
-                line-height: 1.1;
-                margin-bottom: 1.5rem;
-                max-width: 600px;
-              "
-            >
-            Swedish Parental Leave Got You Confused? We've Got You Covered
+            <h1 style="font-size: 3.2rem; font-weight: 700; color: var(--familio-primary-dark); line-height: 1.05; margin-bottom: 1.2rem; letter-spacing: -0.02em;">
+              The Swedish Parental Planning Tool Parents Have Been Waiting For
             </h1>
 
-            <p
-              style="
-                font-size: 1.2rem;
-                color: var(--familio-text-light);
-                line-height: 1.5;
-                margin-bottom: 2rem;
-                max-width: 500px;
-              "
-            >
-              We're soon launching a simple, trusted way to navigate parental
-              benefits. Join our early community and help us create something
-              truly helpful for families.
+            <p style="font-size: 1.25rem; color: var(--familio-text-light); line-height: 1.5; margin-bottom: 2.5rem; font-weight: 400;">
+              We're building a simple, trusted way to navigate Swedish parental
+              benefits. Join our early access list and help us create something
+              truly helpful for Swedish families.
             </p>
 
             <div class="cta-section">
@@ -68,7 +51,7 @@
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 action="/success.html"
-                style="max-width: 400px; margin: 0 auto; text-align: center"
+                style="max-width: 416px; margin: 0; text-align: left;"
               >
                 <!-- Netlify needs to know this form's name on the backend -->
                 <input type="hidden" name="form-name" value="get-started" />
@@ -82,18 +65,11 @@
                 </p>
 
                 <!-- your real fields -->
-                <div class="form-group" style="margin-bottom: 0.5rem">
+                <div class="form-group" style="margin-bottom: 0.75rem">
                   <label
                     for="email"
-                    style="
-                      display: block;
-                      margin-bottom: 0.8rem;
-                      font-size: 1rem;
-                      font-weight: 600;
-                      color: var(--familio-text-dark);
-                    "
-                    >Join the early access list:</label
-                  >
+                    style="display: block; margin-bottom: 0.75rem; font-size: 1.1rem; font-weight: 600; color: var(--familio-text-dark); line-height: 1.3;"
+                    >Reserve your spot:</label>
                   <input
                     type="email"
                     id="email"
@@ -101,70 +77,25 @@
                     placeholder="your@email.com"
                     required
                     class="email-input"
-                    style="
-                      width: 100%;
-                      max-width: 350px;
-                      padding: 12px 16px;
-                      font-size: 1rem;
-                      border-radius: 8px;
-                    "
+                    style="width: 100%; max-width: 416px; padding: 14px 18px; font-size: 1rem; border-radius: 10px; border: 2px solid var(--familio-primary-light); background: white; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05);"
                   />
                 </div>
 
                 <!-- GDPR Compliance Notice -->
-                <div style="margin: 0.6rem 0 1rem 0; text-align: center">
-                  <small
-                    style="
-                      color: var(--familio-text-light);
-                      font-size: 0.8rem;
-                      max-width: 350px;
-                      display: inline-block;
-                      line-height: 1.4;
-                    "
-                  >
+                <div style="margin: 0.75rem 0 1rem 0; text-align: left">
+                  <small style="color: var(--familio-text-light); font-size: 0.85rem; max-width: 416px; display: block; line-height: 1.4; font-weight: 400;">
                     By submitting your email, you agree to receive updates about
                     the beta launch. You can unsubscribe at any time. Read our
-                    <a
-                      href="#privacy-policy"
-                      style="
-                        color: var(--familio-primary);
-                        text-decoration: underline;
-                      "
-                      >Privacy Policy</a
-                    >.
+                    <a href="#privacy-policy" style="color: var(--familio-primary); text-decoration: underline; font-weight: 500;">Privacy Policy</a> for more information.
                   </small>
                 </div>
 
                 <!-- Risk Reversal -->
-                <div
-                  class="guarantee"
-                  style="margin: 0.5rem 0 1.5rem 0; text-align: center"
-                >
-                  <small
-                    style="
-                      color: var(--familio-text-light);
-                      font-size: 0.85rem;
-                      max-width: 350px;
-                      display: inline-block;
-                      line-height: 1.3;
-                    "
-                  >
-                    ✅ Early access updates only • ✅ No spam • ✅ Unsubscribe
-                    anytime
-                  </small>
-                </div>
 
                 <button
                   type="submit"
                   class="btn btn-primary cta-button"
-                  style="
-                    width: 100%;
-                    max-width: 350px;
-                    padding: 14px 24px;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    border-radius: 8px;
-                  "
+                  style="width: 100%; max-width: 416px; padding: 16px 24px; font-size: 1.1rem; font-weight: 600; border-radius: 10px; border: none; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(117, 150, 119, 0.25);"
                 >
                   Reserve My Spot
                 </button>
@@ -172,30 +103,19 @@
             </div>
 
             <!-- Benefits Section -->
-            <div class="benefits-section" style="margin-top: 2.5rem">
-              <ul class="benefits-list">
-                <li
-                  class="benefit-item"
-                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
-                >
-                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
-                  Save time and energy by letting us keep track of the 50+
-                  Försäkringskassa rules
+            <div class="benefits-section" style="margin-top: 3rem">
+              <ul class="benefits-list" style="margin: 0; padding: 0; list-style: none;">
+                <li class="benefit-item" style="display: flex; align-items: flex-start; gap: 14px; font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.4; font-weight: 400;">
+                  <span class="checkmark" style="font-size: 1.2rem; color: var(--familio-primary); font-weight: 700; flex-shrink: 0; margin-top: 1px;">✓</span>
+                  <span>Save time and energy by letting us keep track of the 50+ Försäkringskassa rules</span>
                 </li>
-                <li
-                  class="benefit-item"
-                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
-                >
-                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
-                  Make financially informed decisions that fit your
-                  family's unique situation
+                <li class="benefit-item" style="display: flex; align-items: flex-start; gap: 14px; font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.4; font-weight: 400;">
+                  <span class="checkmark" style="font-size: 1.2rem; color: var(--familio-primary); font-weight: 700; flex-shrink: 0; margin-top: 1px;">✓</span>
+                  <span>Make financially informed decisions that work for your family's unique situation</span>
                 </li>
-                <li
-                  class="benefit-item"
-                  style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.4"
-                >
-                  <span class="checkmark" style="font-size: 1.1rem">✓</span>
-                  Unlock special resources and savings for Swedish families
+                <li class="benefit-item" style="display: flex; align-items: flex-start; gap: 14px; font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.4; font-weight: 400;">
+                  <span class="checkmark" style="font-size: 1.2rem; color: var(--familio-primary); font-weight: 700; flex-shrink: 0; margin-top: 1px;">✓</span>
+                  <span>Join a community of parents planning their Swedish journey together</span>
                 </li>
               </ul>
             </div>
@@ -214,51 +134,26 @@
     </div>
 
     <!-- Privacy Policy Footer -->
-    <footer
-      id="privacy-policy"
-      style="
-        background-color: var(--familio-surface);
-        padding: 2.5rem 20px 2rem;
-        margin-top: 2rem;
-      "
-    >
+    <footer id="privacy-policy" style="background-color: var(--familio-surface); padding: 3rem 20px 2.5rem; margin-top: 3rem;">
       <div style="max-width: 1200px; margin: 0 auto">
-        <h3
-          style="
-            color: var(--familio-primary-dark);
-            font-size: 1.3rem;
-            margin-bottom: 1.2rem;
-            text-align: center;
-          "
-        >
+        <h3 style="color: var(--familio-primary-dark); font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">
           📜 Privacy Policy
         </h3>
-        <div
-          style="
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--familio-text-dark);
-            line-height: 1.6;
-          "
-        >
-          <p style="margin-bottom: 1rem; font-size: 0.95rem">
+        <div style="max-width: 700px; margin: 0 auto; color: var(--familio-text-dark); line-height: 1.6;">
+          <p style="margin-bottom: 1.25rem; font-size: 1rem; font-weight: 400;">
             We collect your email address to notify you about the beta release
             and product updates. Your data is stored securely using Netlify
             Forms and is not shared with third parties.
           </p>
-          <p style="margin-bottom: 0; font-size: 0.95rem">
+          <p style="margin-bottom: 0; font-size: 1rem; font-weight: 400;">
             You can unsubscribe or request deletion anytime by contacting us at
-            <a
-              href="mailto:hello@familioplan.com"
-              style="color: var(--familio-primary)"
-              >hello@palepa.co</a
-            >.
+            <a href="mailto:hello@familioplan.com" style="color: var(--familio-primary); font-weight: 500;">hello@familioplan.com</a>.
           </p>
         </div>
       </div>
     </footer>
 
-    <!-- Enhanced form loading feedback -->
+    <!-- Enhanced form loading feedback with better interactions -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector('form[name="get-started"]');
@@ -269,20 +164,52 @@
             const submitButton = form.querySelector('button[type="submit"]');
             submitButton.textContent = "Reserving...";
             submitButton.disabled = true;
-
-            // Add visual loading state
-            submitButton.style.opacity = "0.7";
+            submitButton.style.opacity = "0.8";
             submitButton.style.cursor = "wait";
+            submitButton.style.transform = "translateY(1px)";
           });
 
           if (emailInput) {
+            // Enhanced input interactions
+            emailInput.addEventListener("focus", function () {
+              this.style.borderColor = "var(--familio-primary)";
+              this.style.boxShadow = "0 0 0 3px rgba(117, 150, 119, 0.1), 0 4px 8px rgba(0,0,0,0.1)";
+            });
+
+            emailInput.addEventListener("blur", function () {
+              this.style.borderColor = "var(--familio-primary-light)";
+              this.style.boxShadow = "0 2px 4px rgba(0,0,0,0.05)";
+            });
+
             emailInput.addEventListener("input", function () {
               if (this.validity.valid) {
                 this.classList.add("valid");
                 this.classList.remove("invalid");
+                this.style.borderColor = "var(--familio-primary)";
               } else {
                 this.classList.add("invalid");
                 this.classList.remove("valid");
+                this.style.borderColor = "var(--familio-secondary)";
+              }
+            });
+          }
+
+          // Enhanced button hover effects
+          const submitButton = form.querySelector('button[type="submit"]');
+          if (submitButton) {
+            submitButton.addEventListener("mouseenter", function () {
+              if (!this.disabled) {
+                this.style.transform = "translateY(-2px)";
+                this.style.boxShadow = "0 6px 16px rgba(117, 150, 119, 0.35)";
+                this.style.backgroundColor = "var(--familio-primary-dark)";
+              }
+            });
+
+            submitButton.addEventListener("mouseleave", function () {
+              if (!this.disabled) {
+                this.style.transform = "translateY(0)";
+                this.style.boxShadow = "0 4px 12px rgba(117, 150, 119, 0.25)";
+                this.style.backgroundColor = "var(--familio-primary)";
               }
             });
           }
