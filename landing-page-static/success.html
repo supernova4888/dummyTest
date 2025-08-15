@@ -13,14 +13,14 @@
         <div class="header-left">
           <a href="/" class="logo-link">
             <img
-              src="familio-logo.png"
-              alt="Familio Logo"
+              src="palepa-logo.png"
+              alt="Palepa Logo"
               class="header-logo"
               style="display: none"
               onload="this.style.display='block'"
               onerror="this.style.display='none'"
             />
-            <h1 class="familio-brand">Familio</h1>
+            <h1 class="familio-brand">Palepa</h1>
           </a>
         </div>
       </div>
@@ -30,95 +30,253 @@
       <div
         class="landing-container"
         style="
-          min-height: calc(100vh - 140px);
+          min-height: calc(100vh - 70px);
           display: flex;
           align-items: center;
           justify-content: center;
+          padding-top: 1.5rem;
+          padding-left: 20px;
+          padding-right: 20px;
         "
       >
         <div
-          class="landing-content"
+          class="success-content"
           style="
-            grid-column: unset;
-            max-width: 700px;
+            max-width: 800px;
             text-align: center;
-            padding: 3rem;
+            padding: 3rem 2rem;
+            background: var(--familio-surface);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(60, 64, 60, 0.12);
           "
         >
-          <div class="content-center" style="max-width: none">
-            <h1
-              class="landing-headline"
-              style="font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.1"
-            >
-              Welcome to the early access list! 🎉
+          <div style="max-width: 650px; margin: 0 auto">
+            <!-- Success Icon -->
+            <div style="margin-bottom: 2rem">
+              <div style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+              ">
+                <span style="font-size: 3rem;">🎉</span>
+              </div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 style="
+              font-size: 3rem;
+              font-weight: 700;
+              color: var(--familio-primary-dark);
+              line-height: 1.05;
+              margin-bottom: 1.5rem;
+              letter-spacing: -0.02em;
+            ">
+              Welcome to the early access list!
             </h1>
-            <p
-              class="landing-subheading"
-              style="
-                font-size: 1.3rem;
-                margin-bottom: 3rem;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-              "
-            >
-              Thank you for joining, we're excited to have you try and shape this tool together.
+
+            <!-- Subheading -->
+            <p style="
+              font-size: 1.35rem;
+              color: var(--familio-text-light);
+              line-height: 1.5;
+              margin-bottom: 3.5rem;
+              font-weight: 400;
+              max-width: 580px;
+              margin-left: auto;
+              margin-right: auto;
+            ">
+              Thank you for joining our community of Swedish parents! We're excited to have you help shape this tool together.
             </p>
 
-            <div class="benefits-section" style="margin-top: 3rem">
-              <h3
-                style="
-                  color: var(--familio-primary-dark);
-                  margin-bottom: 2rem;
-                  font-size: 1.6rem;
-                  font-weight: 600;
-                "
-              >
+            <!-- What's Next Section -->
+            <div style="margin-bottom: 3rem">
+              <h2 style="
+                color: var(--familio-primary-dark);
+                margin-bottom: 2.5rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+              ">
                 What happens next?
-              </h3>
-              <ul
-                class="benefits-list"
-                style="max-width: 500px; margin: 0 auto"
-              >
-                <li
-                  class="benefit-item"
-                  style="
-                    text-align: left;
-                    font-size: 1.1rem;
-                    margin-bottom: 1.5rem;
-                  "
-                >
-                  <span class="checkmark" style="font-size: 1.3rem">🎯</span>
-                  You'll get exclusive beta access before our public launch
-                </li>
-                <li
-                  class="benefit-item"
-                  style="
-                    text-align: left;
-                    font-size: 1.1rem;
-                    margin-bottom: 1.5rem;
-                  "
-                >
-                  <span class="checkmark" style="font-size: 1.3rem">💬</span>
-                  We'll ask for your input on features that matter to Swedish
-                  parents
-                </li>
-                <li
-                  class="benefit-item"
-                  style="
-                    text-align: left;
-                    font-size: 1.1rem;
-                    margin-bottom: 1.5rem;
-                  "
-                >
-                  <span class="checkmark" style="font-size: 1.3rem">💰</span>
-                  You'll receive special pricing when we officially launch
-                </li>
-              </ul>
+              </h2>
+
+              <div style="
+                display: grid;
+                gap: 1.75rem;
+                max-width: 550px;
+                margin: 0 auto;
+                text-align: left;
+              ">
+                <div style="
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 16px;
+                  padding: 1.5rem;
+                  background: white;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 8px rgba(60, 64, 60, 0.08);
+                  border-left: 4px solid var(--familio-primary);
+                ">
+                  <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                  ">
+                    <span style="font-size: 1.4rem;">🎯</span>
+                  </div>
+                  <div>
+                    <h3 style="
+                      font-size: 1.1rem;
+                      font-weight: 600;
+                      color: var(--familio-primary-dark);
+                      margin-bottom: 0.5rem;
+                      line-height: 1.3;
+                    ">
+                      Exclusive Beta Access
+                    </h3>
+                    <p style="
+                      font-size: 1rem;
+                      color: var(--familio-text-dark);
+                      line-height: 1.4;
+                      margin: 0;
+                    ">
+                      You'll get early access to our tool before the public launch
+                    </p>
+                  </div>
+                </div>
+
+                <div style="
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 16px;
+                  padding: 1.5rem;
+                  background: white;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 8px rgba(60, 64, 60, 0.08);
+                  border-left: 4px solid var(--familio-primary);
+                ">
+                  <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                  ">
+                    <span style="font-size: 1.4rem;">💬</span>
+                  </div>
+                  <div>
+                    <h3 style="
+                      font-size: 1.1rem;
+                      font-weight: 600;
+                      color: var(--familio-primary-dark);
+                      margin-bottom: 0.5rem;
+                      line-height: 1.3;
+                    ">
+                      Shape the Product
+                    </h3>
+                    <p style="
+                      font-size: 1rem;
+                      color: var(--familio-text-dark);
+                      line-height: 1.4;
+                      margin: 0;
+                    ">
+                      We'll ask for your input on features that matter to Swedish parents
+                    </p>
+                  </div>
+                </div>
+
+                <div style="
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 16px;
+                  padding: 1.5rem;
+                  background: white;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 8px rgba(60, 64, 60, 0.08);
+                  border-left: 4px solid var(--familio-primary);
+                ">
+                  <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                  ">
+                    <span style="font-size: 1.4rem;">💰</span>
+                  </div>
+                  <div>
+                    <h3 style="
+                      font-size: 1.1rem;
+                      font-weight: 600;
+                      color: var(--familio-primary-dark);
+                      margin-bottom: 0.5rem;
+                      line-height: 1.3;
+                    ">
+                      Special Launch Pricing
+                    </h3>
+                    <p style="
+                      font-size: 1rem;
+                      color: var(--familio-text-dark);
+                      line-height: 1.4;
+                      margin: 0;
+                    ">
+                      You'll receive special pricing when we officially launch
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="
+              padding: 2rem;
+              background: linear-gradient(135deg, var(--familio-primary-light), var(--familio-contrast-accent));
+              border-radius: 12px;
+              margin-top: 2.5rem;
+            ">
+              <p style="
+                font-size: 1.05rem;
+                color: var(--familio-text-dark);
+                line-height: 1.5;
+                margin: 0;
+                font-weight: 500;
+              ">
+                📧 Keep an eye on your inbox for updates, and feel free to reach out to us at
+                <a href="mailto:hello@familioplan.com" style="
+                  color: var(--familio-primary-dark);
+                  text-decoration: none;
+                  font-weight: 600;
+                  border-bottom: 1px solid var(--familio-primary-dark);
+                ">hello@palepa.co</a>
+                with any questions or feedback!
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Enhanced interaction script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add smooth entrance animation
+        const successContent = document.querySelector('.success-content');
+        if (successContent) {
+          successContent.style.opacity = '0';
+          successContent.style.transform = 'translateY(20px)';
+
+          setTimeout(() => {
+            successContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            successContent.style.opacity = '1';
+            successContent.style.transform = 'translateY(0)';
+          }, 100);
+        }
+
+                // Hover effects removed for minimalistic design
+      });
+    </script>
   </body>
 </html>
