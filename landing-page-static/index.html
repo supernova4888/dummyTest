@@ -215,34 +215,6 @@
                 </div>
               </div>
 
-
-                <!-- GDPR Compliance Notice -->
-                <div style="margin: 0.75rem 0 1rem 0; text-align: left">
-                  <small
-                    style="
-                      color: var(--familio-text-light);
-                      font-size: 0.85rem;
-                      max-width: 416px;
-                      display: block;
-                      line-height: 1.4;
-                      font-weight: 400;
-                    "
-                  >
-                    By submitting your email, you agree to receive updates about the beta launch.
-                    You can unsubscribe at any time. Read our
-                    <a
-                      href="#privacy-policy"
-                      style="
-                        color: var(--familio-primary);
-                        text-decoration: underline;
-                        font-weight: 500;
-                      "
-                      >Privacy Policy</a
-                    >
-                    for more information.
-                  </small>
-                </div>
-
                 <!-- Risk Reversal -->
 
                 <!-- <button
@@ -392,8 +364,9 @@
           "
         >
           <p style="margin-bottom: 1.25rem; font-size: 1rem; font-weight: 400">
-            We collect your email address to notify you about the beta launch and product updates.
-            Your data is stored secured locally and is not shared with third parties.
+            By submitting your email, you agree to receive updates about the beta launch and product updates.
+            We collect your email address to notify you about these updates.
+            Your data is stored securely locally and is not shared with third parties.
           </p>
           <p style="margin-bottom: 0; font-size: 1rem; font-weight: 400">
             You can unsubscribe or request deletion anytime by contacting us at
@@ -410,65 +383,13 @@
     <!-- Enhanced form loading feedback with better interactions -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('form[name="get-started"]');
-        const emailInput = document.getElementById('email');
 
-        if (form) {
-          form.addEventListener('submit', function (e) {
-            const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Reserving...';
-            submitButton.disabled = true;
-            submitButton.style.opacity = '0.8';
-            submitButton.style.cursor = 'wait';
-            submitButton.style.transform = 'translateY(1px)';
-          });
 
-          if (emailInput) {
-            // Enhanced input interactions
-            emailInput.addEventListener('focus', function () {
-              this.style.borderColor = 'var(--familio-primary)';
-              this.style.boxShadow =
-                '0 0 0 3px rgba(117, 150, 119, 0.1), 0 4px 8px rgba(0,0,0,0.1)';
-            });
 
-            emailInput.addEventListener('blur', function () {
-              this.style.borderColor = 'var(--familio-primary-light)';
-              this.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
-            });
 
-            emailInput.addEventListener('input', function () {
-              if (this.validity.valid) {
-                this.classList.add('valid');
-                this.classList.remove('invalid');
-                this.style.borderColor = 'var(--familio-primary)';
-              } else {
-                this.classList.add('invalid');
-                this.classList.remove('valid');
-                this.style.borderColor = 'var(--familio-secondary)';
-              }
-            });
-          }
 
-          // Enhanced button hover effects
-          const submitButton = form.querySelector('button[type="submit"]');
-          if (submitButton) {
-            submitButton.addEventListener('mouseenter', function () {
-              if (!this.disabled) {
-                this.style.transform = 'translateY(-2px)';
-                this.style.boxShadow = '0 6px 16px rgba(117, 150, 119, 0.35)';
-                this.style.backgroundColor = 'var(--familio-primary-dark)';
-              }
-            });
 
-            submitButton.addEventListener('mouseleave', function () {
-              if (!this.disabled) {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 4px 12px rgba(117, 150, 119, 0.25)';
-                this.style.backgroundColor = 'var(--familio-primary)';
-              }
-            });
-          }
-        }
+
 
         // Smooth scroll for privacy policy link
         document.querySelector('a[href="#privacy-policy"]').addEventListener('click', function (e) {
