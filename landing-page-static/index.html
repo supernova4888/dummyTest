@@ -50,7 +50,7 @@
                 letter-spacing: -0.02em;
               "
             >
-            Swedish parental leave planning that actually works - all in one app
+              Swedish parental leave planning that actually works - all in one app
             </h1>
 
             <p
@@ -63,64 +63,158 @@
               "
             >
               We're building a simple, trusted way to navigate Swedish parental benefits. Join our
-              early access list and help us create something truly helpful for Swedish families.
+              beta launch and help us create something truly helpful for Swedish families.
             </p>
 
             <div class="cta-section">
-              <!-- Netlify Form -->
-              <form
-                name="get-started"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action="/success.html"
-                style="max-width: 416px; margin: 0; text-align: left"
+              <!-- Enhanced Email CTA -->
+              <div
+                style="
+                  background: linear-gradient(135deg, var(--familio-surface), #fafbfa);
+                  border: 2px solid var(--familio-primary-light);
+                  border-radius: 16px;
+                  padding: 2rem;
+                  margin-bottom: 1.5rem;
+                  box-shadow: 0 4px 20px rgba(117, 150, 119, 0.1);
+                  max-width: 500px;
+                "
               >
-                <!-- Netlify needs to know this form's name on the backend -->
-                <input type="hidden" name="form-name" value="get-started" />
+                <h3
+                  style="
+                    color: var(--familio-primary-dark);
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                    line-height: 1.3;
+                  "
+                >
+                  🚀 Join the Beta Launch
+                </h3>
 
-                <!-- honeypot: humans won't fill this -->
-                <p hidden>
-                  <label
-                    >Don't fill this out if you're human:
-                    <input name="bot-field" />
-                  </label>
-                </p>
-
-                <!-- your real fields -->
-                <div class="form-group" style="margin-bottom: 0.75rem">
-                  <label
-                    for="email"
+                <div style="margin-bottom: 1.5rem;">
+                  <p
                     style="
-                      display: block;
-                      margin-bottom: 0.75rem;
+                      color: var(--familio-text-dark);
+                      font-size: 1.05rem;
+                      line-height: 1.5;
+                      margin-bottom: 1rem;
+                      font-weight: 400;
+                    "
+                  >
+                    Ready to simplify your parental leave planning? Follow these two simple steps:
+                  </p>
+
+                  <div style="margin-left: 1rem;">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 12px;
+                        margin-bottom: 0.75rem;
+                        color: var(--familio-text-dark);
+                        font-size: 1rem;
+                        line-height: 1.4;
+                      "
+                    >
+                      <span
+                        style="
+                          background: var(--familio-primary);
+                          color: white;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          flex-shrink: 0;
+                          margin-top: 1px;
+                        "
+                      >1</span>
+                      <span>Answer the questions below and send them via email to
+                        <a
+                          href="mailto:hello@palepa.co"
+                          style="
+                            color: var(--familio-primary);
+                            font-weight: 600;
+                            text-decoration: none;
+                            border-bottom: 1px solid var(--familio-primary);
+                          "
+                        >hello@palepa.co</a>
+                      </span>
+                    </div>
+
+                    <div
+                      style="
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 12px;
+                        color: var(--familio-text-dark);
+                        font-size: 1rem;
+                        line-height: 1.4;
+                      "
+                    >
+                      <span
+                        style="
+                          background: var(--familio-primary);
+                          color: white;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          flex-shrink: 0;
+                          margin-top: 1px;
+                        "
+                      >2</span>
+                      <span>Join our Facebook community for updates and discussions</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Questions Section -->
+                <div
+                  style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 1.5rem;
+                    border: 1px solid var(--familio-primary-light);
+                    margin-top: 1.5rem;
+                  "
+                >
+                  <h4
+                    style="
+                      color: var(--familio-primary-dark);
                       font-size: 1.1rem;
                       font-weight: 600;
-                      color: var(--familio-text-dark);
-                      line-height: 1.3;
+                      margin-bottom: 1rem;
+                      text-align: center;
                     "
-                    >Reserve your spot:</label
                   >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    required
-                    class="email-input"
+                    📝 Questions to Include in Your Email
+                  </h4>
+                  <ul
                     style="
-                      width: 100%;
-                      max-width: 416px;
-                      padding: 14px 18px;
-                      font-size: 1rem;
-                      border-radius: 10px;
-                      border: 2px solid var(--familio-primary-light);
-                      background: white;
-                      transition: all 0.2s ease;
-                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                      margin: 0;
+                      padding-left: 1.2rem;
+                      color: var(--familio-text-dark);
+                      font-size: 0.95rem;
+                      line-height: 1.5;
                     "
-                  />
+                  >
+                    <li style="margin-bottom: 0.5rem;">What's your expected due date or current child's age?</li>
+                    <li style="margin-bottom: 0.5rem;">Are you planning to share parental leave with a partner?</li>
+                    <li style="margin-bottom: 0.5rem;">What's your biggest challenge with parental leave planning?</li>
+                    <li style="margin-bottom: 0;">Any specific features you'd love to see in the app?</li>
+                  </ul>
                 </div>
+              </div>
+
 
                 <!-- GDPR Compliance Notice -->
                 <div style="margin: 0.75rem 0 1rem 0; text-align: left">
@@ -151,7 +245,7 @@
 
                 <!-- Risk Reversal -->
 
-                <button
+                <!-- <button
                   type="submit"
                   class="btn btn-primary cta-button"
                   style="
@@ -168,8 +262,8 @@
                   "
                 >
                   Reserve My Spot
-                </button>
-              </form>
+                </button> -->
+
             </div>
 
             <!-- Benefits Section -->
@@ -298,8 +392,8 @@
           "
         >
           <p style="margin-bottom: 1.25rem; font-size: 1rem; font-weight: 400">
-            We collect your email address to notify you about the beta release and product updates.
-            Your data is stored securely using Netlify Forms and is not shared with third parties.
+            We collect your email address to notify you about the beta launch and product updates.
+            Your data is stored secured locally and is not shared with third parties.
           </p>
           <p style="margin-bottom: 0; font-size: 1rem; font-weight: 400">
             You can unsubscribe or request deletion anytime by contacting us at
